@@ -9,7 +9,7 @@ class UfcSpider(scrapy.Spider):
     start_urls = ['http://ufcstats.com/statistics/events/completed?page=all']
 
     def parse(self, response):
-
+        # Here is the setting that dictates how many events will be scraped (I scraped a hundred)
         for event in response.css("tr.b-statistics__table-row i.b-statistics__table-content a::attr('href')")[0:100]:
 
             url = response.urljoin(event.extract())
