@@ -9,4 +9,4 @@ Model | Random Forest | Logistic Regression | K Nearest Neighbors | XGBClassifie
 ROC AUC score | 0.53 | 0.58 | 0.54 | 0.52
 
 The results leave much room for improvement. It appears that genetic and age differences are not enough to determine the winner with confidence.
-In the future I might extend the number of features with data on the win-loss ratio of a fighter right before the predicted fight.
+In the future, I might extend the number of features with data on the win-loss ratio of a fighter up until the predicted fight.
