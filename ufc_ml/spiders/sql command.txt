@@ -1,0 +1,17 @@
+create table winners as
+select *
+from fights
+left join fighters on fighters.name == fights.winner;
+
+create table losers as
+select *
+from fights
+left join fighters on fighters.name == fights.loser;
+
+create table ufc_data as
+select*
+from losers
+left join winners on winners.winner == losers.winner and winners.loser == losers.loser;
+
+drop table winners;
+drop table losers;
